@@ -1,0 +1,1271 @@
+/* Adding variables for the colour palette and menu speed which controls the speed for the hamburger menu animation */
+
+:root {
+  --primary-color: #2b2d42;
+  --secondary-color: #edf2f4;
+  --primary-midtone-color: #8d99ae;
+  --secondary-midtone-color: #ef233c;
+  --accent-color: #d90429;
+  --overlay-color: rgba(217, 4, 41, 0.85);
+  --menu-speed: 0.75s;
+}
+
+/* Page reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Body styling, font styling */
+body {
+  width: 100%;
+  height: 100vh;
+  background: var(--primary-color);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--secondary-color);
+  line-height: 1.4;
+}
+
+/* Link styling */
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+/* Styling for headings */
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 2px;
+  font-weight: 900;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+}
+
+/* Button styling */
+
+button {
+  display: inline-block;
+  border: none;
+  width: 125px;
+  padding: 1rem 0.5rem;
+  margin: 1rem 1rem;
+  text-decoration: none;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+/* Button hover styling */
+
+button:hover {
+  background: var(--accent-color);
+  color: var(--secondary-color);
+  transform: scale(0.9);
+}
+
+/* Second button styling */
+
+.btn-2 {
+  display: inline-block;
+  border: none;
+  width: 125px;
+  padding: 1rem 0.5rem;
+  margin: 1rem 1rem;
+  text-decoration: none;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+/* Button hover effect */
+
+.btn-2:hover {
+  background: var(--accent-color);
+  color: var(--secondary-color);
+  transform: scale(0.9);
+}
+
+/* Header styling, aligns social links */
+
+.header {
+  grid-area: header;
+}
+
+/* Header alignment and background colour */
+
+header {
+  display: flex;
+  background: var(--accent-color);
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Head styling for each page */
+
+.page-header-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+/* Social media links, font styling, list styling, hover animations*/
+
+.social_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social_links ul {
+  list-style: none;
+}
+
+.social_links ul li {
+  display: inline-block;
+  padding: 0.2rem;
+  margin: 0.5rem 1rem;
+}
+
+.social_links ul li {
+  transition: 0.4s ease;
+}
+
+.social_links ul li:hover {
+  color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+.social_links ul li a {
+  transition: 0.4s ease;
+}
+
+.social_links ul li a:hover {
+  color: var(--primary-color);
+}
+
+/* Home page container styling */
+
+.main-container {
+  max-width: 960px;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+/* Home Page Styling and grid layout */
+.grid-layout-home {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50px 75px 5fr auto;
+  grid-template-areas:
+    "header header"
+    "main-h1 main-h1"
+    "left-side right-side"
+    "p p"
+    "a a"
+    "footer footer";
+}
+
+/* Designer side styling */
+
+.left-side {
+  display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  grid-area: left-side;
+  background: var(--secondary-color);
+}
+
+/* Rotating designer heading by 90degress and increaing the scale */
+.left-side h2 {
+  transform: rotate(90deg) scale(2);
+  font-weight: 900;
+}
+
+.left-side h2 a {
+  font-weight: 800;
+}
+
+/* Increasing designer font size on hover */
+
+.left-side h2:hover {
+  transform: rotate(90deg) scale(2.2);
+}
+
+/* Developer side styling */
+
+.right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: right-side;
+  background: var(--primary-midtone-color);
+}
+
+/* Rotating developer heading by -90degrees and increasing the scale */
+
+.right-side h2 {
+  transform: rotate(-90deg) scale(2);
+  font-weight: 900;
+}
+
+/* Changing the font colour to transparent and adding a stroke tot he font */
+
+.right-side h2 a {
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--primary-color);
+}
+
+/* Increasing developer font size on hover */
+
+.right-side h2:hover {
+  transform: rotate(-90deg) scale(2.2);
+}
+
+/* Daniel Kurz H1 styling */
+
+.main-h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: main-h1;
+  font-size: 2rem;
+}
+
+.h1-break {
+  display: none;
+}
+
+/* Landing page paragraph */
+
+.main-para {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  grid-area: p;
+  padding: 1rem 2rem 0 2rem;
+}
+
+/* Call to action buttons styling */
+
+.cta-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: a;
+}
+
+/* Portfolio Page grid layout */
+
+.grid-layout-portfolio {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 100%;
+  grid-template-rows: 50px 75px auto;
+  grid-template-areas:
+    "header"
+    "main-h1"
+    "card"
+    "footer";
+}
+
+/* Project cards positiong within the wrapper */
+
+.project-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Project card styling, alignment and grid-area */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-midtone-color);
+  border-radius: 15px;
+  margin: 1rem;
+  padding: 1rem;
+  grid-area: card;
+}
+
+.project-card:nth-child(1) {
+  margin-top: 0;
+}
+
+.project-card h3 {
+  margin-bottom: 0.8rem;
+}
+
+.project-card img {
+  margin-bottom: 0.8rem;
+  width: 100%;
+}
+
+/* About Page grid layout */
+
+.grid-layout-about {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 100%;
+  grid-template-rows: 50px 75px auto;
+  grid-template-areas:
+    "header"
+    "main-h1"
+    "about-s"
+    "footer";
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Defining the about section grid area */
+
+#about-section p {
+  margin: 0 1rem;
+  grid-area: about-s;
+}
+
+#about-h1 {
+  height: 75px;
+}
+
+/* Skills card styling, alignment and grid area */
+
+.skills-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-midtone-color);
+  border-radius: 15px;
+  margin: 1rem 1rem 0 1rem;
+  padding: 1rem;
+  grid-area: card;
+}
+
+.skills-card img {
+  width: 100%;
+}
+
+.core-skills {
+  display: none;
+}
+
+.tech-skills {
+  display: none;
+}
+
+/* Tech stack icon styling */
+
+.tech-stack {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+.tech-stack ul li {
+  display: inline-block;
+  list-style: none;
+  font-size: 4rem;
+  margin: 1rem 0.5rem;
+}
+
+/* Blog page styling */
+.grid-layout-blog {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 100%;
+  grid-template-rows: 50px 75px auto;
+  grid-template-areas:
+    "header"
+    "main-h1"
+    "blog-s"
+    "footer";
+}
+
+/* Defining blog section grid area */
+
+#blog-section {
+  grid-area: blog-s;
+}
+
+/* Blog cards and blog list positiong within the wrapper */
+
+.blog-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Blog list styling */
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  color: var(--secondary-color);
+  background: var(--accent-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 15px;
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+.blog-list ul li {
+  transition: 0.4s ease;
+}
+.blog-list li {
+  list-style: none;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+/* Increase size on hover */
+
+.blog-list ul li:hover {
+  transform: scale(1.2);
+}
+
+.blog-list li a {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+
+/* Change colour on hover */
+
+.blog-list li a:hover {
+  color: var(--primary-color);
+}
+
+/* Blog card headings positioning */
+
+.blog-card-headings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Blog card styling, alignment and grid area */
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  max-width: 980px;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-midtone-color);
+  border-radius: 15px;
+  margin: 1rem 1rem 0 1rem;
+  padding: 1rem;
+  grid-area: card;
+}
+
+.blog-card img {
+  margin: 1rem;
+  width: 100%;
+}
+
+.blog-card p {
+  font-size: 1.2rem;
+}
+
+/* Contact page styling */
+
+/* Form styling */
+.grid-layout-contact {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 100%;
+  grid-template-rows: 50px 75px auto;
+  grid-template-areas:
+    "header"
+    "main-h1"
+    "contact-s"
+    "footer";
+}
+
+/* Defining contact section grid area */
+
+#contact-section {
+  grid-area: contact-s;
+}
+
+/* Contact page content positioning and alignment */
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-h1 {
+  height: 75px;
+}
+
+.contact-wrapper p {
+  padding: 0 1rem;
+  margin-bottom: 0;
+}
+
+/* Contact page button styling */
+
+.contact-wrapper a {
+  width: auto;
+  padding: 1rem 0.5rem;
+  text-decoration: none;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.4s ease;
+  margin-bottom: 0;
+}
+
+/* Contact form styling*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1rem;
+}
+
+form label {
+  font-size: 1.2rem;
+}
+
+form ::placeholder {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  resize: vertical;
+  font-family: "Roboto" sans-serif;
+  margin: 1rem 0;
+}
+
+input[type="submit"] {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  border: none;
+  width: 125px;
+  padding: 1rem 0.5rem;
+  text-decoration: none;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+input[type="submit"]:hover {
+  background: var(--accent-color);
+  color: var(--secondary-color);
+  transform: scale(0.9);
+}
+
+/* Media Queries */
+
+/* Styling changes for screen sizes of 768px and above */
+
+@media screen and (min-width: 768px) {
+  body {
+    /* Changing background colour */
+    background: var(--secondary-color);
+  }
+
+  /* Increasing font size of social links */
+
+  .social_links ul li {
+    margin: 0.5rem 3rem;
+  }
+
+  /* Defining the grid layout for the home page */
+
+  .grid-layout-home {
+    grid-template-columns: 1fr 1fr 2.5fr 2.5fr 1fr 1fr;
+    grid-template-rows: 75px 1fr 2fr 1fr auto;
+    grid-template-areas:
+      "header header header header header header"
+      "main-h1 main-h1 main-h1 main-h1 main-h1 main-h1"
+      "left-side left-side left-side right-side right-side right-side"
+      ". . p p . ."
+      ". . a a . ."
+      "footer footer footer footer footer footer";
+  }
+
+  /* Defining the grid layout for the header which includes social links */
+
+  .header {
+    grid-column: 1 / 7;
+    grid-row: 1 / 2;
+  }
+
+  /* Main heading styling and grid positioning */
+
+  .main-h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    align-items: flex-start;
+    text-align: center;
+    line-height: 1;
+    text-shadow: 4px 4px 4px #000;
+    grid-row: 2 / 3;
+    grid-column: 3 / 5;
+    z-index: 1;
+  }
+
+  /* Break for Daniel Kurz heading on main page */
+
+  .h1-break {
+    display: block;
+  }
+
+  /* Developer side grid layout placement and media query styling */
+
+  .right-side {
+    justify-content: flex-end;
+    grid-row: 2 / 5;
+    grid-column: 4 / 7;
+  }
+
+  .right-side h2 {
+    position: relative;
+    right: -20px;
+    transform: rotate(-90deg) scale(4);
+    font-weight: 900;
+  }
+
+  .right-side h2:hover {
+    transform: rotate(-90deg) scale(4.2);
+  }
+
+  /* Designer side grid layout and media query styling */
+
+  .left-side {
+    justify-content: flex-start;
+    grid-row: 2 / 5;
+    grid-column: 1 / 4;
+  }
+
+  .left-side h2 {
+    position: relative;
+    right: 20px;
+    transform: rotate(90deg) scale(4);
+    font-weight: 900;
+  }
+
+  .left-side h2:hover {
+    transform: rotate(90deg) perspective(1px) scale(4.2);
+  }
+
+  /* Home page paragraph media query styling and positioning */
+
+  .main-para {
+    justify-content: center;
+    align-self: center;
+    align-items: flex-start;
+    height: 43vh;
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    font-weight: bold;
+    background: var(--primary-color);
+    grid-row: 3 / 4;
+    grid-column: 3 / 5;
+    z-index: 1;
+  }
+
+  /* Call to action button media query grid positioning */
+
+  .cta-btns {
+    justify-self: center;
+    align-self: flex-end;
+    margin: 2rem;
+    width: 100%;
+    grid-row: 3 / 4;
+    grid-column: 3 / 5;
+    z-index: 1;
+  }
+
+  /* Media query button styling */
+
+  button {
+    display: inline-block;
+    width: 175px;
+    padding: 1.5rem 1rem;
+    text-decoration: none;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  /* Media query social media links styling */
+
+  .social_links a {
+    font-size: 2.5rem;
+  }
+
+  /* Portfolio media queries */
+  .grid-layout-portfolio {
+    grid-template-columns: 100%;
+    grid-template-rows: 75px 100px auto auto;
+  }
+
+  /* Portfolio section grid positioning */
+
+  #portfolio-section {
+    grid-row: 3 / 4;
+  }
+
+  /* Portfolio header styling increasing the size */
+
+  #portfolio-h1 {
+    font-size: 3rem;
+  }
+
+  /* Shrinking project cards width to allow 2 side-by-side */
+
+  .project-card {
+    flex-basis: 45%;
+  }
+
+  .project-card:nth-child(1) {
+    margin-top: 1rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .project-card img {
+    height: 35vw;
+  }
+
+  /* About media queries grid layout */
+
+  .grid-layout-about {
+    grid-template-columns: 100%;
+    grid-template-rows: 75px 100px auto auto;
+  }
+
+  /* Increasing font size for about section paragraph and changing the colour */
+
+  #about-section p {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+
+  /* About section grid positioning */
+
+  #about-section {
+    grid-row: 3 / 4;
+  }
+
+  /* About page header, inscreasing the font-size */
+
+  #about-h1 {
+    height: 100px;
+    font-size: 3rem;
+  }
+
+  /* Changing the about page graphs from vertical to horizontal */
+
+  .mob-core-skills {
+    display: none;
+  }
+
+  /* Displaying the horizontal graph images on about page */
+
+  .core-skills {
+    display: block;
+  }
+
+  /* Changing the about page graphs from vertical to horizontal */
+  .mob-tech-skills {
+    display: none;
+  }
+
+  /* Displaying the horizontal graph images on about page */
+
+  .tech-skills {
+    display: block;
+  }
+
+  /* Increasing font size of the skills card headings */
+
+  .skills-card h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Technical stack icons styling */
+
+  .tech-stack ul li {
+    display: inline-block;
+    list-style: none;
+    font-size: 6rem;
+    margin: 1rem;
+    color: var(--primary-color);
+  }
+
+  /* Blog media queries grid layout */
+
+  .grid-layout-blog {
+    grid-template-columns: 100%;
+    grid-template-rows: 75px 100px auto auto;
+  }
+
+  /* Increasing font size */
+
+  #blog-h1 {
+    font-size: 3rem;
+  }
+
+  /* Adjusting blog list container width */
+
+  .blog-list {
+    flex-basis: 50%;
+    margin-top: 1rem;
+  }
+
+  /* Increasing blog list heading size */
+
+  .blog-list h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Moving content to left hand side */
+
+  .blog-card {
+    justify-content: flex-start;
+    height: 100%;
+  }
+
+  /* Increasing heading font size */
+
+  .blog-card-headings h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Increasing heading font size */
+
+  .blog-card-headings h4 {
+    font-size: 1.2rem;
+  }
+
+  /* Adjusting blog image size */
+
+  .blog-card img {
+    height: 400px;
+    width: 500px;
+  }
+
+  /* Contact page media queries grid layout */
+
+  .grid-layout-contact {
+    grid-template-columns: 100%;
+    grid-template-rows: 75px 100px auto auto;
+  }
+
+  /* Changing link colours and increasing font size */
+
+  .contact-wrapper a {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+  }
+
+  /* Changing font colour and size */
+
+  .contact-wrapper p {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 1rem 1rem 0 1rem;
+  }
+
+  /* Contact section grid positioning */
+
+  #contact-section {
+    grid-row: 3 / 4;
+  }
+
+  /* Increasing contact page heading font size */
+
+  #contact-h1 {
+    height: 100px;
+    font-size: 3rem;
+  }
+
+  /* Adding border to contact form and adjusting the width */
+
+  form {
+    border: 2px solid var(--primary-midtone-color);
+    border-radius: 15px;
+    width: 70%;
+    margin: 1rem;
+  }
+
+  /* Increasing form label font size, changing the font colour */
+
+  form label {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-left: 12%;
+  }
+
+  /* Increasing placeholder texts font size and changing the colour, also increasing the opacity */
+
+  form ::placeholder {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    opacity: 1;
+  }
+
+  /* Adjusting the text areas with, centering the text fields and changing the font and background colour */
+
+  input[type="text"],
+  textarea {
+    width: 75%;
+    align-self: center;
+    background: var(--primary-color);
+    color: var(--primary-color);
+  }
+
+  /* Changing the submit buttons font and background colour, increasing the font size */
+
+  input[type="submit"] {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+  }
+}
+
+/* Media queries for screen sizes 1100px and larger */
+
+@media screen and (min-width: 1100px) {
+  body {
+    /* Changing background colour */
+    background: var(--secondary-color);
+  }
+
+  /* Adjusting the grid layout and positiong for the home page */
+
+  .grid-layout-home {
+    grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr;
+    grid-template-rows: 75px 1fr 2fr 1fr auto;
+    grid-template-areas:
+      "header header header header header header"
+      "main-h1 main-h1 main-h1 main-h1 main-h1 main-h1"
+      "left-side left-side left-side right-side right-side right-side"
+      ". . p p . ."
+      ". . a a . ."
+      "footer footer footer footer footer footer";
+  }
+
+  /* Defining designer side grid positioning */
+
+  .left-side {
+    grid-row: 2 / 5;
+    grid-column: 2 / 4;
+  }
+
+  /* Defining developer side grid positioning */
+
+  .right-side {
+    grid-row: 2 / 5;
+    grid-column: 4 / 6;
+  }
+
+  /* Defining home page main paragraph grid positioning */
+
+  .main-para {
+    justify-self: center;
+    grid-column: 3 / 5;
+    max-width: 630px;
+  }
+
+  /* Adding a border on the left side of the designer container */
+
+  .left-side {
+    border-left: 5px solid var(--primary-color);
+  }
+
+  /* Adjusting the grid layout and positioning for the portfolio page */
+
+  .grid-layout-portfolio {
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 75px 100px auto;
+    grid-template-areas:
+      "header header header"
+      ". p1 ."
+      ". ps ."
+      "footer footer footer ";
+  }
+
+  /* Defining the grid area of the page header, this is the main header on all pages except for the home page */
+
+  .page-header-1 {
+    grid-area: p1;
+  }
+
+  /* Increasing the portfolio headers font size */
+
+  #portfolio-h1 {
+    font-size: 4rem;
+  }
+
+  /* Defining portfolio section grid area and adding a border on the left and right side of the section */
+
+  #portfolio-section {
+    grid-area: ps;
+    border-left: solid 5px var(--primary-color);
+    border-right: solid 5px var(--primary-color);
+  }
+
+  /* Increasing font size */
+
+  .project-card p {
+    font-size: 1.5rem;
+  }
+
+  /* Adjusting the height of the images in the project cards */
+
+  .project-card img {
+    height: 25vw;
+  }
+
+  /* Adjusting the grid layout and positioning for the about page */
+
+  .grid-layout-about {
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 75px 100px auto;
+    grid-template-areas:
+      "header header header"
+      ". p1 ."
+      ". about-s ."
+      "footer footer footer";
+  }
+
+  /* Increasing the about headers font size */
+
+  #about-h1 {
+    font-size: 4rem;
+  }
+
+  /* Defining the about section grid area and adding a border on the left and right side */
+
+  #about-section {
+    grid-area: about-s;
+    border-left: solid 5px var(--primary-color);
+    border-right: solid 5px var(--primary-color);
+  }
+
+  /* Adjusting the width of the skills card */
+
+  .skills-card {
+    flex-basis: 65%;
+  }
+
+  /* Increasing font size of skills card headings */
+
+  .skills-card h3 {
+    font-size: 2rem;
+  }
+
+  /* Adjusting the grid layout and positiong for the blog page */
+
+  .grid-layout-blog {
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 75px 100px auto;
+    grid-template-areas:
+      "header header header"
+      ". p1 ."
+      ". blog-s ."
+      "footer footer footer ";
+  }
+
+  /* Defining the grid area for the blog section and adding a border on the left and right side of the section */
+
+  #blog-section {
+    grid-area: blog-s;
+    border-left: solid 5px var(--primary-color);
+    border-right: solid 5px var(--primary-color);
+  }
+
+  /* Increasing the font size of the blog page heading */
+
+  #blog-h1 {
+    font-size: 4rem;
+  }
+
+  /* Adjusting the size of the blog list width */
+
+  .blog-list {
+    flex-basis: 40%;
+  }
+
+  /* Increasing the font size of the blog list heading */
+
+  .blog-list h3 {
+    font-size: 2rem;
+  }
+
+  /* Grid layout for the blog card */
+
+  .blog-card {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr;
+    flex-direction: row;
+  }
+
+  /* Grid positioning for the blog card headings */
+
+  .blog-card-headings {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-top: 2rem;
+  }
+
+  /* Increasing the font size of the blog card headings */
+
+  .blog-card-headings h3 {
+    font-size: 2rem;
+  }
+
+  /* Increasing the font size of the Date on the blog cards */
+
+  .blog-card-headings h4 {
+    font-size: 1.2rem;
+  }
+
+  /* Grid positioning for the blog card image */
+
+  .blog-card img {
+    order: -1;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    margin-right: 1rem;
+  }
+
+  /* Grid positioning for the blog card paragraph */
+
+  .blog-card p {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  /* Adjusting the grid layout and positioning for the contact page */
+
+  .grid-layout-contact {
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 75px 100px auto;
+    grid-template-areas:
+      "header header header"
+      ". p1 ."
+      ". contact-s ."
+      "footer footer footer";
+  }
+
+  /* Defining the grid area of the contact section and adding a border on the left and right side of the section */
+
+  #contact-section {
+    grid-area: contact-s;
+    border-left: 5px solid var(--primary-color);
+    border-right: 5px solid var(--primary-color);
+  }
+
+  /* Increasing the font size of the contact page heading */
+
+  #contact-h1 {
+    font-size: 4rem;
+  }
+
+  .contact-wrapper p {
+    margin-top: 1rem;
+  }
+}
+
+/* Footer Styling */
+.footer {
+  display: flex;
+  height: 50px;
+  background: var(--accent-color);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color);
+  font-weight: 500;
+  grid-area: footer;
+}

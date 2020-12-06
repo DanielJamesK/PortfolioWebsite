@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="style.css"
+      integrity="sha512-fH4aZk/gTHO/yODeZFEOT0zPcS9EJa1Z3xVRKetnisofgL53rXQZtHS/MC6Z1Z02olMvGSUM0em3G8QrCOVHmg== sha384-Xa4OAWzOFferyodXAynRJDty/PopSJhMxKbLLH5/zE6+TrlNQ09UbAK0IWmA+Gh1"
+    />
+    <link
+      rel="stylesheet"
+      href="menu-styles.css"
+      integrity="sha512-1R3cehN+C33wtZVx5k8gXIxDZBZt7acpH0WtWXC+HrXfymOA2oIsUsDIUU6YPKJ9GPTQiskA0Ht2+7X0YuQaXQ== sha384-EhemAyGYZnSP5uYB/QPDxs9UNVQPqewnuivhYxg55yjk2AbHe8ZGmTckN06n1QFZ"
+    />
+
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Quicksand:wght@300;400;500&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      integrity="sha512-z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg== sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Quicksand:wght@300;400;500&display=swap"
+      rel="stylesheet"
+      integrity="sha512-z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg== sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <section>
+      <!-- Header with social media links -->
+      <div class="grid-layout-portfolio">
+        <header class="header" id="portfolio-header">
+          <nav>
+            <!-- Social links wrapper -->
+            <div class="social_links">
+              <ul>
+                <!-- Social links icons -->
+                <li>
+                  <a href="https://twitter.com/DanielJamesKurz" target="_blank"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://github.com/DanielJamesK" target="_blank"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/daniel-kurz-332976192/"
+                    target="_blank"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://codepen.io/DanielJK" target="_blank"
+                    ><i class="fab fa-codepen"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <!-- Hamburger menu wrapper -->
+            <div class="menu-wrap">
+              <!-- Input button with the checkbox type, allows us to style the "checked" state and reveal the hamburger menu-->
+              <input type="checkbox" class="toggler" />
+              <!-- Hamburger menu icon -->
+              <div class="hamburger">
+                <div></div>
+              </div>
+              <!-- Navigation menu links -->
+              <div class="nav_links">
+                <div>
+                  <div>
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="portfolio.html">Portfolio</a></li>
+                      <li><a href="about.html">About</a></li>
+                      <li><a href="blog.html">Blog</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <!-- Page header -->
+        <h1 class="page-header-1" id="portfolio-h1">PORTFOLIO</h1>
+        <!-- Project section which includes the project cards, the cards include a heading, image, paragraph about the project, and link to the project  -->
+        <section id="portfolio-section">
+          <div class="project-card-wrapper">
+            <!-- Project cards -->
+            <article class="project-card">
+              <!-- Project card heading -->
+              <h3>Animation Challenge</h3>
+              <!-- Project card image -->
+              <img
+                src="images/project-image-1.jpg"
+                alt="Animation Challenge image"
+              />
+              <!-- Project card paragraph -->
+              <p>
+                This project was about using animation in css, you can view the
+                project by clicking on the button below.
+              </p>
+              <!-- Project card call to action button -->
+              <a
+                href="https://edstem.org/courses/4464/lessons/4044/slides/30520"
+                class="btn-2"
+                target="_blank"
+                >VIEW PROJECT</a
+              >
+            </article>
+            <article class="project-card">
+              <h3>Flexbox Challenge</h3>
+              <img
+                src="images/project-image-2.jpg"
+                alt="Flexbox Challenge image"
+              />
+              <p>
+                This project was about using flexbox, you can view the project
+                by clicking on the button below.
+              </p>
+              <a
+                href="https://edstem.org/courses/4464/lessons/4040/slides/30523"
+                class="btn-2"
+                target="_blank"
+                >VIEW PROJECT</a
+              >
+            </article>
+            <article class="project-card">
+              <h3>Responsive Design Challenge</h3>
+              <img
+                src="images/project-image-3.jpg"
+                alt="Responsive Design image"
+              />
+              <p>
+                This project was about creating a responsive design, you can
+                view the project by clicking on the button below.
+              </p>
+              <a
+                href="https://edstem.org/courses/4464/lessons/4041/slides/30525"
+                class="btn-2"
+                target="_blank"
+                >VIEW PROJECT</a
+              >
+            </article>
+            <article class="project-card">
+              <h3>Layout Challenge</h3>
+              <img
+                src="images/project-image-4.jpg"
+                alt="Layout Challenge image"
+              />
+              <p>
+                This project focused on layout using css, you can view the
+                project by clicking on the button below.
+              </p>
+              <a
+                href="https://edstem.org/courses/4464/lessons/4042/slides/30524"
+                class="btn-2"
+                target="_blank"
+                >VIEW PROJECT</a
+              >
+            </article>
+          </div>
+        </section>
+        <!-- Footer -->
+        <footer class="footer">
+          <span>&copy; Daniel Kurz</span>
+        </footer>
+      </div>
+    </section>
+  </body>
+</html>

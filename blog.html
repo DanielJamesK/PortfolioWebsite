@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="style.css"
+      integrity="sha512-fH4aZk/gTHO/yODeZFEOT0zPcS9EJa1Z3xVRKetnisofgL53rXQZtHS/MC6Z1Z02olMvGSUM0em3G8QrCOVHmg== sha384-Xa4OAWzOFferyodXAynRJDty/PopSJhMxKbLLH5/zE6+TrlNQ09UbAK0IWmA+Gh1"
+    />
+    <link
+      rel="stylesheet"
+      href="menu-styles.css"
+      integrity="sha512-1R3cehN+C33wtZVx5k8gXIxDZBZt7acpH0WtWXC+HrXfymOA2oIsUsDIUU6YPKJ9GPTQiskA0Ht2+7X0YuQaXQ== sha384-EhemAyGYZnSP5uYB/QPDxs9UNVQPqewnuivhYxg55yjk2AbHe8ZGmTckN06n1QFZ"
+    />
+
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Quicksand:wght@300;400;500&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      integrity="sha512-z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg== sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Quicksand:wght@300;400;500&display=swap"
+      rel="stylesheet"
+      integrity="sha512-z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg== sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <title>Blog</title>
+  </head>
+  <body>
+    <!-- Header with social media links -->
+    <section>
+      <div class="grid-layout-blog">
+        <header class="header" id="blog-header">
+          <nav>
+            <!-- Social links wrapper -->
+            <div class="social_links">
+              <ul>
+                <!-- Social links icons -->
+                <li>
+                  <a href="https://twitter.com/DanielJamesKurz" target="_blank"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://github.com/DanielJamesK" target="_blank"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/daniel-kurz-332976192/"
+                    target="_blank"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://codepen.io/DanielJK" target="_blank"
+                    ><i class="fab fa-codepen"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <!-- Hamburger menu wrapper -->
+            <div class="menu-wrap">
+              <!-- Input button with the checkbox type, allows us to style the "checked" state and reveal the hamburger menu-->
+              <input type="checkbox" class="toggler" />
+              <!-- Hamburger menu icon -->
+              <div class="hamburger"><div></div></div>
+              <div class="nav_links">
+                <!-- Navigation menu links -->
+                <div>
+                  <div>
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="portfolio.html">Portfolio</a></li>
+                      <li><a href="about.html">About</a></li>
+                      <li><a href="blog.html">Blog</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <!-- Page heading -->
+        <h1 class="page-header-1" id="blog-h1">BLOG</h1>
+        <!-- Blog section, which includes 5 blog posts, and a list of blog names that link to the corresponding blog post -->
+        <section id="blog-section">
+          <div class="blog-wrapper">
+            <!-- Blog list container -->
+            <article class="blog-list">
+              <!-- Blog list heading -->
+              <h3>List of Blogs</h3>
+              <!-- List of blogs and the blog posts that they link to -->
+              <ul>
+                <li><a href="#A-day-in-the-sun">A Day In The Sun</a></li>
+                <li><a href="#What-a-meal">What A Meal</a></li>
+                <li><a href="#Sleepy-pup">Sleepy Pup</a></li>
+                <li><a href="#Beach-day">Beach Day</a></li>
+                <li><a href="#Roadtrip">Roadtrip</a></li>
+              </ul>
+            </article>
+            <!-- Blog card -->
+            <article class="blog-card">
+              <!-- Wrapper for the blog post headings -->
+              <div class="blog-card-headings">
+                <!-- Blog post heading -->
+                <h3 id="A-day-in-the-sun">A Day In The Sun</h3>
+                <!-- Date blog was posted -->
+                <h4>August 21st 2020</h4>
+              </div>
+              <!-- Blog post image -->
+              <img
+                src="images/blog-image-1.jpg"
+                alt="Image of a sunset at the beach"
+              />
+              <!-- Blog post -->
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Provident deserunt incidunt saepe sit? Ratione commodi
+                accusamus, fuga nisi maxime similique voluptate dignissimos
+                quidem hic maiores recusandae repudiandae totam earum, fugiat id
+                natus? Molestias, sit. Numquam assumenda omnis sint itaque hic.
+              </p>
+            </article>
+            <article class="blog-card">
+              <div class="blog-card-headings">
+                <h3 id="What-a-meal">What A Meal</h3>
+                <h4>August 14th 2020</h4>
+              </div>
+              <img src="images/blog-image-2.jpg" alt="Image of sushi rolls" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Provident deserunt incidunt saepe sit? Ratione commodi
+                accusamus, fuga nisi maxime similique voluptate dignissimos
+                quidem hic maiores recusandae repudiandae totam earum, fugiat id
+                natus? Molestias, sit. Numquam assumenda omnis sint itaque hic.
+              </p>
+            </article>
+            <article class="blog-card">
+              <div class="blog-card-headings">
+                <h3 id="Sleepy-pup">Sleepy Pup</h3>
+                <h4>August 7th 2020</h4>
+              </div>
+              <img
+                src="images/blog-image-3.jpg"
+                alt="Image of a sleeping puppy"
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Provident deserunt incidunt saepe sit? Ratione commodi
+                accusamus, fuga nisi maxime similique voluptate dignissimos
+                quidem hic maiores recusandae repudiandae totam earum, fugiat id
+                natus? Molestias, sit. Numquam assumenda omnis sint itaque hic.
+              </p>
+            </article>
+            <article class="blog-card">
+              <div class="blog-card-headings">
+                <h3 id="Beach-day">Beach Day</h3>
+                <h4>July 31st 2020</h4>
+              </div>
+              <img
+                src="images/blog-image-4.jpg"
+                alt="Image of a toy car on the sand"
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Provident deserunt incidunt saepe sit? Ratione commodi
+                accusamus, fuga nisi maxime similique voluptate dignissimos
+                quidem hic maiores recusandae repudiandae totam earum, fugiat id
+                natus? Molestias, sit. Numquam assumenda omnis sint itaque hic.
+              </p>
+            </article>
+            <article class="blog-card">
+              <div class="blog-card-headings">
+                <h3 id="Roadtrip">Roadtrip</h3>
+                <h4>July 24th 2020</h4>
+              </div>
+              <img
+                src="images/blog-image-5.jpg"
+                alt="Image of a car driving with a view of the ocean"
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Provident deserunt incidunt saepe sit? Ratione commodi
+                accusamus, fuga nisi maxime similique voluptate dignissimos
+                quidem hic maiores recusandae repudiandae totam earum, fugiat id
+                natus? Molestias, sit. Numquam assumenda omnis sint itaque hic.
+              </p>
+            </article>
+          </div>
+        </section>
+        <!-- Footer -->
+        <footer class="footer">
+          <span>&copy; Daniel Kurz</span>
+        </footer>
+      </div>
+    </section>
+  </body>
+</html>
